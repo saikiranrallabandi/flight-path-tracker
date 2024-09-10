@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  flight-path-tracker:
+    build: .
+    ports:
+      - '8080:8080'
+    container_name: flight-path-tracker

@@ -4,6 +4,12 @@ const port = 8080;
 
 app.use(express.json());
 
+
+// /health endpoint
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'OK', message: 'Service is running' });
+});
+
 app.post('/calculate', (req, res) => {
   const flights = req.body;
 
